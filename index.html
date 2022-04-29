@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Projeto HTML & CSS</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="./assets/img/logo.png" alt="LOGO">
+        </div>
+        <ul>
+            <li><a target="_blank" href="https://github.com/e-evaristo">GitHub</a></li>
+            <li><a target="_blank" href="mailto:email@test.com">E-mail</a></li>
+            <li><a target="_blank" href="https://wa.me/83999999999">WhatsApp</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="container">
+            <div class="name">
+                <h1>Projeto HTML & CSS</h1>
+                <h5>Front-end Developer</h5>
+            </div>
+
+            <div id="arrow" onclick="displayAbout()">
+                <i id="animation" class="fa-solid fa-angles-down"></i>
+            </div>
+
+            <div id="about" style="display: none;">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta veritatis officia cum, sapiente eum optio assumenda, et nisi nulla harum esse placeat. Error quod repellendus harum odit voluptate aliquam nam.
+                </p>
+            </div>
+
+            <div class="form">
+                <div>
+                    <p>Deixe seu contato:</p>
+                </div>
+                
+                <form action="">
+                    <input type="email" name="email" id="email" placeholder="Seu melhor e-mail">
+                    <button>Enviar</button>
+                </form>
+                
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const displayAbout = () => {
+            const arrow = document.getElementById('animation');
+            const about = document.getElementById('about');
+            arrow.classList.toggle('rotate');
+            about.style.display = about.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
